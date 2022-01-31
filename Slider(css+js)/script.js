@@ -1,8 +1,3 @@
-const leftImage = document.querySelectorAll(".left-image");
-const rightImage = document.querySelectorAll(".right-image");
-const nextSlide = document.getElementsByClassName(".swiper-slide-prev-prev");
-
-// const nextSlideChild = nextSlide.querySelectorAll("img");
 const swiper = new Swiper(".swiper-container", {
   pagination: {
     el: ".swiper-pagination",
@@ -38,26 +33,5 @@ const swiper = new Swiper(".swiper-container", {
       opacity: 1,
     },
   },
-  // on: {
-  //   slideChange: function (event) {
-  //     leftImage.forEach((item) => {
-  //       item.classList.toggle("active");
-  //     });
-  //     rightImage.forEach((item) => {
-  //       item.classList.toggle("active");
-  //     });
-  //   },
-  // },
-  // slidesOffsetBefore: 100,
   slidesOffsetAfter: 100,
-});
-
-swiper.on("slideChange", function () {
-  const elem = swiper.el;
-  const leftOfElem = elem.querySelector(".swiper-slide-active .left-image");
-  const rightOfElem = elem.querySelector(".swiper-slide-active .right-image");
-
-  // // const childsOfElem = nodesOfElem.querySelectorAll(".left-image");
-  // nodesOfElem.classList.toggle("active");
-  // console.log(nodesOfElem, nextElem, prevElem);
 });
